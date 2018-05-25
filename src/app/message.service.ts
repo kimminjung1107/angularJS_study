@@ -4,16 +4,16 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class MessageService {
-  arrMsg: string[] = [];  // array string
+  messageService: string[] = [];  // array string
 
   constructor() { }
 
   add(msg: string) {
-    this.arrMsg.push(msg);
+    this.messageService.push(msg);
   }
 
   // 초기화
   clear() {
-    this.arrMsg = [];
+    this.messageService = [];
   }
 }
