@@ -1,4 +1,15 @@
 <h1>{{title}}</h1>
+<nav>
+
+  <div><a routerLink="/dashboard">DashBoard</a></div>
+  <!-- app-counting.module.ts 에 정의된 rountingModule 정보-->
+  <div><a routerLink="/heros">Heroes</a></div>
+
+</nav>
 <!--heroes 화면 불러오기 -->
-<app-heroes></app-heroes>
+<!--<app-heroes></app-heroes>-->
+<!-- rounter로 불러온 heroes화면을 출력 -->
+<router-outlet></router-outlet>
+
+
 <app-messages></app-messages>

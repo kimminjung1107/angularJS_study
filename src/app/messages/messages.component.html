@@ -1,3 +1,5 @@
-<p>
-  messages works!
-</p>
+<div *ngIf="messageService.arrMsg.length">
+  <h2>message</h2>
+  <button (click)="messageService.clear()">clear</button>
+  <div *ngFor="let message of messageService.arrMsg"></div>
+</div>

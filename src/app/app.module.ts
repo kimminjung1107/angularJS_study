@@ -7,6 +7,9 @@ import {FormsModule} from '@angular/forms';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import {HeroService} from './hero.service';
 import { MessagesComponent } from './messages/messages.component';
+import {HttpClientModule} from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
 
@@ -14,13 +17,16 @@ import { MessagesComponent } from './messages/messages.component';
       AppComponent,
       HeroesComponent,
       HeroDetailComponent,
-      MessagesComponent
+      MessagesComponent,
+      DashboardComponent
     ],
     imports: [
       BrowserModule,
-      FormsModule
+      FormsModule,
+      HttpClientModule,
+      AppRoutingModule
     ],
-  providers: [ HeroService ],
-    bootstrap: [AppComponent]
+  providers: [],
+    bootstrap: [AppComponent] // 가장 먼저 Load 되야하는 component
 })
 export class AppModule { }
